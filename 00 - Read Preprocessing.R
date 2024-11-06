@@ -30,7 +30,6 @@ sampleNames
 filtFs <- file.path(path, "filterAndTrim", paste0(sampleNames, "_F_filt.fastq.gz"))
 filtRs <- file.path(path, "filterAndTrim", paste0(sampleNames, "_R_filt.fastq.gz"))
 
-
 ## Quality filtering and trimming ====
 ### Based on quality profile, trim to c(270, 220)
 out <- filterAndTrim(fnFs, filtFs, fnRs, filtRs, truncLen = c(270, 220),
@@ -38,20 +37,18 @@ out <- filterAndTrim(fnFs, filtFs, fnRs, filtRs, truncLen = c(270, 220),
                         compress=TRUE, multithread=FALSE)
 saveRDS(out, here::here("Output/00 - Read Preprocessing Output/out.rds"))
 
-## if these reads below don't match, it was likely ran with 275,275 -> looks like I actually ran it like this
-
 ## Assess reads lost ====
-sum(out[,1])-sum(out[,2]) # 9,022,331 reads lost 
+sum(out[,1])-sum(out[,2]) 
 
 filter_fun = data.frame(out)
 filter_fun
 ratio = sum(filter_fun$reads.out)/sum(filter_fun$reads.in)
-ratio # ~50% reads lost 
+ratio  
 
 ## Learn errors ====
-errF <- learnErrors(filtFs, multithread = FALSE) # 124737250 total bases in 453590 reads from 3 samples will be used for learning the error rates 
+errF <- learnErrors(filtFs, multithread = FALSE) 
 saveRDS(errF, here::here("Output/00 - Read Preprocessing Output/errF.rds"))
-errR <- learnErrors(filtRs, multithread = FALSE) # 124737250 total bases in 453590 reads from 3 samples will be used for learning the error rates
+errR <- learnErrors(filtRs, multithread = FALSE) 
 saveRDS(errR, here::here("Output/00 - Read Preprocessing Output/errR.rds"))
 
 ## Ensure sample naming is consistent ====
@@ -70,6 +67,4 @@ saveRDS(contigs, here::here("Output/00 - Read Preprocessing Output/contigs.rds")
 
 ### Make sequence table and visualize contig length and frequency
 seq_table <- makeSequenceTable(contigs) 
-dim(seq_table) # Total of 4761 contigs
-
-
+dim(seq_table) 
