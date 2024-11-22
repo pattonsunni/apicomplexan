@@ -34,7 +34,7 @@ ps.sub <- subset_samples(ps.All, Reef_Type != "FOR")
 
 ## Does LTER Site or Location affect beta diversity prior to disturbance (A18)? ====
 ## Subset data 
-ps.A18 <- subset_samples(ps.sub, Date == "A18") # 24 total samples 
+ps.A18 <- subset_samples(ps.All, Date == "A18") # 24 total samples 
 View(ps.A18@sam_data) 
 # Site 0: 3 samples, site 1: 3 samples, site 2: 4 samples, site 3: 4 samples, site 3.5: 4 samples, site 4: 3 samples, site 5: 1 sample, site 5.5: 2 samples
 # North: 10 samples, east: 11 samples, west: 3 samples
@@ -66,7 +66,7 @@ pwadonis_A18_loc$Date <- "August 2018 (Before)"
 
 ## Does LTER Site or Location affect beta diversity during disturbance (M19)? ====
 ## Subset data 
-ps.M19 <- subset_samples(ps.sub, Date == "M19") # 25 total samples 
+ps.M19 <- subset_samples(ps.All, Date == "M19") # 25 total samples 
 View(ps.M19@sam_data) 
 # Site 0: 3 samples, site 1: 3 samples, site 2: 6 samples, site 3: 2 samples, site 3.5: 4 samples, site 4: 3 samples, site 5: 2 samples, site 5.5: 2 samples
 # North: 12 samples, east: 9 samples, west: 4 samples
@@ -98,7 +98,7 @@ pwadonis_M19_loc$Date <- "March 2019 (During)"
 
 ## Does LTER Site or Location affect beta diversity after disturbance (A19)? ====
 ## Subset data 
-ps.A19 <- subset_samples(ps.sub, Date == "A19") # 22 total samples 
+ps.A19 <- subset_samples(ps.All, Date == "A19") # 22 total samples 
 View(ps.A19@sam_data) 
 # Site 0: 1 samples, site 1: 3 samples, site 2: 5 samples, site 3: 2 samples, site 3.5: 4 samples, site 4: 3 samples, site 5: 2 samples, site 5.5: 2 samples
 # North: 9 samples, east: 9 samples, west: 4 samples
@@ -133,7 +133,7 @@ pwadonis_A19_loc$Date <- "August 2019 (After)"
 
 ## Does LTER Site or Location affect beta diversity one year after disturbance (M20)? ====
 ## Subset data 
-ps.M20 <- subset_samples(ps.sub, Date == "M20") # 12 total samples 
+ps.M20 <- subset_samples(ps.All, Date == "M20") # 12 total samples 
 View(ps.M20@sam_data) 
 # Site 0: 0 samples, site 1: 1 samples, site 2: 4 samples, site 3: 0 samples, site 3.5: 2 samples, site 4: 2 samples, site 5: 2 samples, site 5.5: 1 samples
 # North: 5 samples, east: 4 samples, west: 3 samples
