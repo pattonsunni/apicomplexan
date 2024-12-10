@@ -10,6 +10,7 @@ set.seed(123)
 library(ggplot2)
 library(phyloseq)
 library(speedyseq)
+library(microViz)
 
 ## Load data ====
 readRDS(here::here("Output/02 - Phyloseq Preprocessing Output/ps.rare.rds")) -> ps.rare
