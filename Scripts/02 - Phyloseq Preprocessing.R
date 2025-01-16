@@ -12,6 +12,7 @@ library(phyloseq)
 library(vegan)
 library(microViz)
 library(ggplot2)
+library(decontam)
 
 ## Load data ====
 read.csv(here::here("Output/01 - Metadata Output/metadata.csv")) -> metadata
