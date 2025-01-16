@@ -15,6 +15,7 @@ library(ggpubr)
 library(dplyr)
 library(rstatix)
 library(broom)
+library(effsize)
 
 ## Load data ====
 readRDS(here::here("Output/02 - Phyloseq Preprocessing Output/ps.rare.rds")) -> ps.rare
@@ -184,3 +185,22 @@ kw_M20$Date <- "M20"
 
 rbind(kw_A18, kw_M19, kw_A19, kw_M20) -> kw_output
 write.csv(kw_output, here::here("kw_output.csv"))
+
+# Calculate effect size 
+                                         melt %>%
+  filter(Date_Longer == "March 2019 (During)" & Location == "East")
+melt %>%
+  filter(Date_Longer == "March 2019 (During)" & Location == "North")
+
+group1 <- c(0.23667723, 0.13854277, 0.13445970, 0.13206617, 0.08546287, 0.05040479, 0.03428370, 0.02752552, 0.02731433)
+group2 <- c(0.11587469, 0.10116156, 0.03583245, 0.03484688, 0.03097501, 0.02949666, 0.02604717, 0.02541359, 0.02316086, 0.02316086, 0.02231609, 0.00499824)
+cohen.d(group1, group2)
+
+melt %>%
+  filter(Date_Longer == "August 2019 (After)" & Location == "West")
+melt %>%
+  filter(Date_Longer == "August 2019 (After)" & Location == "North")
+
+group1 <- c(0.74565294, 0.44104189, 0.13558606, 0.08039423)
+group2 <- c(0.544808166, 0.073143259, 0.034494896, 0.013164379, 0.011756424, 0.006687786, 0.003379092, 0.003308694,0.002111932)
+cohen.d(group1, group2)
