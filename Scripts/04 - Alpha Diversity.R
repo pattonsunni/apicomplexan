@@ -36,7 +36,7 @@ alphaDiv$SampleID <- rownames(ps.rare.genus@sam_data)
 merge(as.matrix(ps.rare.genus@sam_data), alphaDiv, by = "SampleID") -> alphaDiv 
 
 ## Save alpha diversity output 
-write.csv(alphaDiv, here::here("alphaDiv.csv"))
+write.csv(alphaDiv, here::here("Output/04 - Alpha Diversity Output/alphaDiv.csv"))
 
 
 ## Assess normality and variance assumptions ====
@@ -81,13 +81,13 @@ mod_chao1_pw2 <- rstatix::add_significance(data = as.data.frame(mod_chao1_pw2), 
 mod_chao1_pw2$Metric <- "Chao1"
 
 lmem_all <- rbind(lmem_shan, lmem_chao1)
-write.csv(lmem_all, here::here("lmem_output.csv"))
+write.csv(lmem_all, here::here("Output/04 - Alpha Diversity Output/lmem_output.csv"))
 
 alpha_pairwise <- rbind(mod_shan_pw, mod_chao1_pw)
-write.csv(alpha_pairwise, here::here("alpha_pairwise.csv"))
+write.csv(alpha_pairwise, here::here("Output/04 - Alpha Diversity Output/alpha_pairwise.csv"))
 
 alpha_pairwise2 <- rbind(mod_shan_pw2, mod_chao1_pw2)
-write.csv(alpha_pairwise2, here::here("alpha_pairwise2.csv"))
+write.csv(alpha_pairwise2, here::here("Output/04 - Alpha Diversity Output/alpha_pairwise2.csv"))
 
 
 
@@ -166,7 +166,7 @@ plot_alphadiv_chao1 <- plot_alphadiv_chao1 + geom_point(aes(color = Date_Longer)
 
 alpha_plot <- ggarrange(plot_alphadiv_shan, plot_alphadiv_chao1, ncol = 2, nrow = 1, labels = c("A", "B"), common.legend = TRUE)
 
-ggplot2::ggsave(here::here("plot_alpha.svg"), alpha_plot,
+ggplot2::ggsave(here::here("Output/04 - Alpha Diversity Output/plot_alpha.svg"), alpha_plot,
                 height = 300, width = 500, units = "mm",
                 scale = 0.5, dpi = 1000)
  

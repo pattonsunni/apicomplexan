@@ -50,17 +50,17 @@ sampledf_A18 <- data.frame(sample_data(ps.A18.rclr))
 
 ## adonis2 (permanova)
 adonis2_A18_site <- broom::tidy(adonis2(A18_rclr_euc ~ LTER_Site, data = sampledf_A18, perm = 999))
-# p = 0.079; beta diversity not significantly different by LTER Site
+# p = 0.071; beta diversity not significantly different by LTER Site
 adonis2_A18_site$Comparison <- "LTER Site"
 adonis2_A18_site$Date <- "August 2018 (Before)"
 
 adonis2_A18_location <- broom::tidy(adonis2(A18_rclr_euc ~ Location, data = sampledf_A18, perm = 999)) 
-# p = 0.019; beta diversity significantly different by Location
+# p = 0.027; beta diversity significantly different by Location
 adonis2_A18_location$Comparison <- "Location"
 adonis2_A18_location$Date <- "August 2018 (Before)"
 
 rbind(adonis2_A18_site, adonis2_A18_location) -> adonis.A18
-write.csv(adonis.A18, here::here("adonis_siteLoc_A18.csv"))
+write.csv(adonis.A18, here::here("Output/05 - Beta Diversity Output/adonis_siteLoc_A18.csv"))
 
 ## Pairwise adonis 
 pwadonis_A18_loc <- pairwise.adonis(A18_rclr_euc, sampledf_A18$Location, p.adjust.m = "fdr", perm = 999) 
@@ -87,12 +87,12 @@ sampledf_M19 <- data.frame(sample_data(ps.M19.rclr))
 
 ## adonis2 (permanova)
 adonis2_M19_site <- broom::tidy(adonis2(M19_rclr_euc ~ LTER_Site, data = sampledf_M19, perm = 999)) 
-# p = 0.028; beta diversity significantly different by LTER Site
+# p = 0.082; beta diversity not significantly different by LTER Site
 adonis2_M19_site$Comparison <- "LTER Site"
 adonis2_M19_site$Date <- "March 2019 (During)"
 
 adonis2_M19_location <- broom::tidy(adonis2(M19_rclr_euc ~ Location, data = sampledf_M19, perm = 999)) 
-# p = 0.002; beta diversity significantly different by Location
+# p = 0.009; beta diversity significantly different by Location
 adonis2_M19_location$Comparison <- "Location"
 adonis2_M19_location$Date <- "March 2019 (During)"
 
@@ -103,7 +103,7 @@ pwadonis_M19_loc$Date <- "March 2019 (During)"
 
 ## Does LTER Site or Location affect beta diversity after disturbance (A19)? ====
 ## Subset data 
-ps.A19 <- subset_samples(ps.sub, Date == "A19") # 22 total samples 
+ps.A19 <- subset_samples(ps.All, Date == "A19") # 22 total samples 
 View(ps.A19@sam_data) 
 # Site 0: 1 samples, site 1: 3 samples, site 2: 5 samples, site 3: 2 samples, site 3.5: 4 samples, site 4: 3 samples, site 5: 2 samples, site 5.5: 2 samples
 # North: 9 samples, east: 9 samples, west: 4 samples
@@ -124,7 +124,7 @@ adonis2_A19_site <- broom::tidy(adonis2(A19_rclr_euc ~ LTER_Site, data = sampled
 adonis2_A19_site$Comparison <- "LTER Site"
 adonis2_A19_site$Date <- "August 2019 (After)"
 
-adonis2_A19_location <- broom::tidy(adonis2(A19_rclr_euc ~ Location, data = sampledf_A19, perm = 999)) # p = 0.005; beta diversity significantly different by Location
+adonis2_A19_location <- broom::tidy(adonis2(A19_rclr_euc ~ Location, data = sampledf_A19, perm = 999)) # p = 0.002; beta diversity significantly different by Location
 adonis2_A19_location$Comparison <- "Location"
 adonis2_A19_location$Date <- "August 2019 (After)"
 
@@ -138,7 +138,7 @@ pwadonis_A19_loc$Date <- "August 2019 (After)"
 
 ## Does LTER Site or Location affect beta diversity one year after disturbance (M20)? ====
 ## Subset data 
-ps.M20 <- subset_samples(ps.sub, Date == "M20") # 12 total samples 
+ps.M20 <- subset_samples(ps.All, Date == "M20") # 12 total samples 
 View(ps.M20@sam_data) 
 # Site 0: 0 samples, site 1: 1 samples, site 2: 4 samples, site 3: 0 samples, site 3.5: 2 samples, site 4: 2 samples, site 5: 2 samples, site 5.5: 1 samples
 # North: 5 samples, east: 4 samples, west: 3 samples
@@ -155,11 +155,11 @@ M20_rclr_euc <- phyloseq::distance(ps.M20.rclr, method = "euclidean")
 sampledf_M20 <- data.frame(sample_data(ps.M20.rclr))
 
 ## adonis2 (permanova)
-adonis2_M20_site <- broom::tidy(adonis2(M20_rclr_euc ~ LTER_Site, data = sampledf_M20, perm = 999)) # p = 0.177; beta diversity is not significantly different by LTER Site
+adonis2_M20_site <- broom::tidy(adonis2(M20_rclr_euc ~ LTER_Site, data = sampledf_M20, perm = 999)) # p = 0.246; beta diversity is not significantly different by LTER Site
 adonis2_M20_site$Comparison <- "LTER Site"
 adonis2_M20_site$Date <- "March 2020 (1 Year Later)"
 
-adonis2_M20_location <- broom::tidy(adonis2(M20_rclr_euc ~ Location, data = sampledf_M20, perm = 999)) # p = 0.02; beta diversity significantly different by Location
+adonis2_M20_location <- broom::tidy(adonis2(M20_rclr_euc ~ Location, data = sampledf_M20, perm = 999)) # p = 0.029; beta diversity significantly different by Location
 adonis2_M20_location$Comparison <- "Location"
 adonis2_M20_location$Date <- "March 2020 (1 Year Later)"
 
@@ -169,10 +169,10 @@ pwadonis_M20_loc$Date <- "March 2020 (1 Year Later)"
 
 ## Combine statistics output ====
 adonis2_output_date <- rbind(adonis2_A18_site, adonis2_A18_location, adonis2_M19_site, adonis2_M19_location, adonis2_A19_site, adonis2_A19_location, adonis2_M20_site, adonis2_M20_location)
-write.csv(adonis2_output_date, here::here("adonis_output_date.csv"))
+write.csv(adonis2_output_date, here::here("Output/05 - Beta Diversity Output/adonis_output_date.csv"))
 
 pwadonis_output_date <- rbind(pwadonis_A18_loc, pwadonis_M19_loc, pwadonis_A19_loc, pwadonis_A19_site, pwadonis_M20_loc)
-write.csv(pwadonis_output_date, here::here("pwadonis_output_date.csv"))
+write.csv(pwadonis_output_date, here::here("Output/05 - Beta Diversity Output/pwadonis_output_date.csv"))
 
 ## Determine the affect of time on beta diversity in the north shore ====
 ## Subset data
@@ -282,9 +282,9 @@ adonis2_eastwest_date$Location <- "East + West"
 ## Combine statistics output ====
 ## adonis2 
 adonis2_output <- rbind(adonis2_north_site, adonis2_north_date, adonis2_east_site, adonis2_east_date, adonis2_west_site, adonis2_west_date)
-write.csv(adonis2_output, here::here("adonis_output_loc.csv"))
+write.csv(adonis2_output, here::here("Output/05 - Beta Diversity Output/adonis_output_loc.csv"))
 
-write.csv(pw_north_date, here::here("pwadonis_output_loc.csv"))
+write.csv(pw_north_date, here::here("Output/05 - Beta Diversity Output/pwadonis_output_loc.csv"))
 
 ## Plot ====
 
@@ -330,7 +330,6 @@ PCA_west <- ps.west.rclr %>%
         title = element_text(face = "bold")) + facet_wrap(~Location) + theme(strip.text = element_text(face = "bold", size = 14)) + guides(color = guide_legend(title = "Date")) + theme(legend.position = "none") 
   # + theme(legend.position = c(0.8, 0.06)) + theme(legend.key.size = unit(1, "mm"))
 
-## Supplemental plot
 ggarrange(PCA_north, PCA_east, PCA_west, ncol = 3) -> betadiv_shores_plot
 
 ggplot2::ggsave(here::here("beta_div.png"), betadiv_plot,
@@ -506,10 +505,10 @@ ggarrange(PCA_north, PCA_east, PCA_west, nrow = 1, ncol = 3) -> x
 
 ggarrange(x, plot_disp, ncol = 1, nrow = 2, common.legend = TRUE, legend = "bottom") -> PCA_disp
 
-ggplot2::ggsave(here::here("PCA_disp.png"), PCA_disp,
+ggplot2::ggsave(here::here("Output/05 - Beta Diversity Output/PCA_disp.png"), PCA_disp,
                 height = 450, width = 600, units = "mm",
                 scale = 0.5, dpi = 1000)
 
 ## Save files ====
-write.csv(disp_df, here::here("beta_disp.csv"))
-write.csv(disp_stats_df, here::here("beta_disp_stats.csv"))
+write.csv(disp_df, here::here("Output/05 - Beta Diversity Output/beta_disp.csv"))
+write.csv(disp_stats_df, here::here("Output/05 - Beta Diversity Output/beta_disp_stats.csv"))

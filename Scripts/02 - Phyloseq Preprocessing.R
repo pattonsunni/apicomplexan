@@ -1,5 +1,5 @@
 # Author: Sunni Patton
-# Last edited: 11/08/2024
+# Last edited: 2/25/2025
 # Title: Phyloseq preprocessing
 # Overview: Preparing initial phyloseq object(s)
 
@@ -13,6 +13,7 @@ library(vegan)
 library(microViz)
 library(ggplot2)
 library(decontam)
+library(speedyseq)
 
 ## Load data ====
 read.csv(here::here("Output/01 - Metadata Output/metadata.csv")) -> metadata
@@ -29,6 +30,7 @@ rownames(metadata) <- x
 
 ## Create phyloseq object ====
 ps.All <- phyloseq(otu_table(seq_table_nometa, taxa_are_rows=FALSE), sample_data(metadata), tax_table(taxa_nometa))
+# 1216 taxa
 
 ## Remove contaminants ====
 sample_data(ps.All)$Sample_or_Control <- "Sample"
@@ -49,7 +51,7 @@ head(which(contamdf_combined$contaminant))
 
 ps.All <- prune_taxa(!contamdf_combined$contaminant, ps.All) # Contains 1212 ASVs after contaminants removed
 
-subset_taxa(ps.All, Domain != "NA") -> ps.All
+subset_taxa(ps.All, Domain != "NA") -> ps.All #1211 taxa
 
 ## Fix taxonomy table ====
 ps.All <- phyloseq_validate(ps.All)
@@ -66,7 +68,7 @@ tax_fix(
 
 ## Remove NCs
 subset_samples(ps.All, Location != "NC") -> ps.All # 85 samples
-ps.All <- prune_taxa(taxa_sums(ps.All@otu_table) > 0, ps.All) # 1209 total taxa
+ps.All <- prune_taxa(taxa_sums(ps.All@otu_table) > 0, ps.All) # 1208 total taxa
 
 ## Make rarefaction curve ====
 as.matrix(as.data.frame(ps.All@otu_table)) -> data
@@ -84,10 +86,71 @@ vegan::rarecurve(data, step = 100, label = FALSE, abline(v = 14205, col = "red")
 subset_samples(ps.All, SampleID != "1_BAK_ACR_57_M19") -> ps.All
 subset_samples(ps.All, SampleID != "1_BAK_ACR_57_A18") -> ps.All
 
-# Save phyloseq object
+
 ps.All <- prune_taxa(taxa_sums(ps.All@otu_table) > 0, ps.All) # 1205 total taxa
-saveRDS(ps.All, here::here("ps.All.rds"))  
 sum(sample_sums(ps.All)) # 10319623 total reads
+
+# Fix taxonomy 
+## Checked symbiodiniaceae taxa annotated to species level on blast -> none were actually 100% seq ID so change to genus only (since these primers aren't what's usually used for symbiodiniaceae)
+
+### Remove _sp.
+as.data.frame(ps.All@tax_table) -> taxTable
+gsub("_sp.", "", taxTable$Species) -> taxTable.fix
+as.data.frame(taxTable.fix) -> taxTable.fix
+
+### Remove _
+gsub("_", " ", taxTable.fix$taxTable.fix) -> taxTable.fix2
+as.data.frame(taxTable.fix2) -> taxTable.fix2
+
+### Remove 'Genus'
+gsub("Genus", "", taxTable.fix2$taxTable.fix2) -> taxTable.fix3
+as.data.frame(taxTable.fix3) -> taxTable.fix3
+
+taxTable$Taxa <- taxTable.fix3
+
+tax_table(ps.All) <- as.matrix(taxTable)
+
+
+### Change Symbiodinium microadriaticum to Symbiodinium, 
+ps.All@tax_table[ps.All@tax_table == "Symbiodinium microadriaticum"] <- "Symbiodinium"
+ps.All@tax_table[ps.All@tax_table == "Symbiodinium_microadriaticum"] <- "Symbiodinium"
+### Change Symbiodinium goreaui to Cladocopium (S. goreaui is really C. goreaui)
+ps.All@tax_table[ps.All@tax_table == "Symbiodinium goreaui"] <- "Cladocopium"
+### Change Cladocopium goreaui to Cladocopium 
+ps.All@tax_table[ps.All@tax_table == "Cladocopium goreaui"] <- "Cladocopium"
+## Change Fugacium kawagutii to Fugacium
+ps.All@tax_table[ps.All@tax_table == "Fugacium kawagutii"] <- "Fugacium"
+
+
+
+## Add ASV column to taxonomy table ====
+ps.All <- ps.All %>% mutate_tax_table(ASV = paste0("ASV", 1:1205))
+
+### Add sequence to taxtable 
+ps.All <- ps.All %>% mutate_tax_table(Sequence = paste0(rownames(ps.All@tax_table)))
+
+dna <- Biostrings::DNAStringSet(taxa_names(ps.All))
+names(dna) <- taxa_names(ps.All)
+ps.All <- merge_phyloseq(ps.All, dna)
+taxa_names(ps.All) <- paste0(ps.All@tax_table[,10], " ASV", seq(ntaxa(ps.All)))
+
+## Save taxonomy table (only DNA sequence and ASV columns) ====
+### Save taxonomy table as tibble
+as_tibble(ps.All@tax_table) -> taxa_tibble
+### Save only relevent columns
+taxa_df <- data.frame(taxa_tibble$.otu, taxa_tibble$ASV)
+### Rename columns
+colnames(taxa_df) <- c("Sequence", "ASV")
+
+write_csv(taxa_df, here::here("sequenceASV_psAll.csv"))
+
+
+
+### Add TaxonID column
+ps.All <- ps.All %>% mutate_tax_table(TaxonID = paste0(Taxa, " - ", ASV))
+
+saveRDS(ps.All, here::here("Output/02 - Phyloseq Preprocessing Output/ps.All.rds"))  
+
 
 ## Run rrarefy() ====
 # Get otu_table dataframe 
@@ -106,10 +169,10 @@ rare_otuTable <- rarefied_df
 ps.rare <- phyloseq(otu_table(rare_otuTable, taxa_are_rows=FALSE),sample_data(rare_samData),tax_table(rare_taxTable))
 
 # Make sure there aren't any taxa present that aren't actually in any sample
-ps.rare <- prune_taxa(taxa_sums(ps.rare@otu_table) > 0, ps.rare) # Removed 187 taxa (1018 remaining)
+ps.rare <- prune_taxa(taxa_sums(ps.rare@otu_table) > 0, ps.rare) # 1005 remaining
 
 summary(taxa_sums(ps.rare)) # minimum times a taxa appears: 1, 1st quartile: 4, median: 19.0, mean: 1158.2     3rd quantile: 100.8 , max: 253634.0 
 
-saveRDS(ps.rare, here::here("ps.rare.rds"))
+saveRDS(ps.rare, here::here("Output/02 - Phyloseq Preprocessing Output/ps.rare.rds"))
 
 

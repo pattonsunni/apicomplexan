@@ -15,6 +15,7 @@ library(ggpubr)
 library(dplyr)
 library(rstatix)
 library(broom)
+library(dplyr)
 library(effsize)
 
 ## Load data ====
@@ -33,19 +34,19 @@ tax_fix(
   verbose = TRUE
 ) -> ps.rare
 
-### Remove _sp.
-as.data.frame(ps.rare@tax_table) -> taxTable
-gsub("_sp.", " Genus", taxTable$Species) -> taxTable.fix
-as.data.frame(taxTable.fix) -> taxTable.fix
 
-### Remove _
-gsub("_", " ", taxTable.fix$taxTable.fix) -> taxTable.fix2
-as.data.frame(taxTable.fix2) -> taxTable.fix2
-taxTable$Taxa <- taxTable.fix2
+## Fix extra space around taxa names
+as.data.frame(ps.rare@tax_table) -> ps.rare.taxtable
+ps.rare.taxtable$Taxa[ps.rare.taxtable$Taxa == "Cladocopium  "] <- "Cladocopium"
+ps.rare.taxtable$Taxa[ps.rare.taxtable$Taxa == "Cladocopium "] <- "Cladocopium"
+ps.rare.taxtable$Taxa[ps.rare.taxtable$Taxa == "Symbiodinium "] <- "Symbiodinium"
+ps.rare.taxtable$Taxa[ps.rare.taxtable$Taxa == "Corallicola aquarius "] <- "Corallicola aquarius"
+ps.rare.taxtable$Taxa[ps.rare.taxtable$Taxa == "Rhodomelaceae X"] <- "Rhodomelaceae Family"
 
-tax_table(ps.rare) <- as.matrix(taxTable)
+as.matrix(ps.rare.taxtable) -> ps.rare.taxtable
 
-saveRDS(ps.rare, here::here("ps.rare.renamed.rds"))
+tax_table(ps.rare) <- ps.rare.taxtable
+
 
 ## Transform to relative abundance ====
 ps.rare.trans <- transform_sample_counts(ps.rare, function(OTU) OTU/sum(OTU))
@@ -60,13 +61,10 @@ ps.rare.top100@sam_data$CoralID <- as.factor(ps.rare@sam_data$CoralID)
 ## Plot relative abundance for all non-metazoan micro-eukaryotes ====
 tax_glom(ps.rare.top100, taxrank = "Taxa", NArm = FALSE) -> ps.rare.top100
 
-colors <- c("#4BACC6", "#EA6312", "#800000", "#FFB547", "#ADB17D", "#7F5F52", "#D092A7",
+colors <- c("#4BACC6", "#EA6312", "#800000",  "#ADB17D", "#FFB547", "#7F5F52", "#D092A7",
             "#9B6BF2", "#E33D6F", "#8EC0C1", "#4472C4", "#928EBE", "#24693D")
 
-as.data.frame(ps.rare.top100@tax_table) -> x
-x$Taxa[x$Taxa == "Rhodomelaceae X Genus"] <- "Rhodomelaceae Family" 
 
-tax_table(ps.rare.top100) <- as.matrix(x)
 
 ps.rare.top100@sam_data$Date_Long <- factor(ps.rare.top100@sam_data$Date_Long, levels = c("August 2018", "March 2019", "August 2019","March 2020"))
 
@@ -103,14 +101,15 @@ top100 <- names(sort(taxa_sums(ps.rare.trans), decreasing = TRUE))[1:100]
 ps.rare.top100 <- prune_taxa(top100, ps.rare.trans)
 
 # Change coralID to factor
-ps.rare.top100@sam_data$CoralID <- as.factor(ps.rare@sam_data$CoralID)
+ps.rare.top100@sam_data$CoralID <- as.factor(ps.rare.top100@sam_data$CoralID)
 
 ## Plot relative abundance for alveolates ====
 tax_glom(ps.rare.top100, taxrank = "Taxa", NArm = FALSE) -> ps.rare.top100
 
-colors <- c("#800000","#A1D68B", "#FFB547", "#ADB17D", "#7F5F52", "#B31166", "#24693D", "#F3E79A", "#4472C4", "#928EBE" , "lightgrey")
+colors <- c("#800000","#A1D68B", "#ADB17D", "#FFB547", "#7F5F52", "#B31166", "#24693D", "#F3E79A", "#4472C4", "#928EBE" , "lightgrey")
 
 ## Plot by site and date
+
 ps.rare.top100@sam_data$Date_Long <- factor(ps.rare.top100@sam_data$Date_Long, levels = c("August 2018", "March 2019", "August 2019","March 2020"))
 
 plot.relAbund_alv <- plot_bar(subset_samples(ps.rare.top100), x="CoralID", fill="Taxa") + 
@@ -134,16 +133,16 @@ plot.relAbund_alv_loc <- plot.relAbund_alv_loc + theme_bw(base_line_size = 1, ba
 plots <- ggarrange(plot.relAbund, plot.relAbund_alv, labels = c("A", "B"), ncol = 1, nrow = 2)
 plots_loc <- ggarrange(plot.relAbund_loc, plot.relAbund_alv_loc, labels = c("A", "B"), ncol = 1, nrow = 2)
 
-ggplot2::ggsave(here::here("plot_relabund.png"), plots,
-                height = 600, width = 500, units = "mm",
+ggplot2::ggsave(here::here("Output/03 - Relative Abundance Output/plot_relabund.png"), plots,
+                height = 600, width = 650, units = "mm",
                 scale = 0.5, dpi = 1000)
 
-ggplot2::ggsave(here::here("plot_relabund_loc.png"), plots_loc,
-                height = 600, width = 500, units = "mm",
+ggplot2::ggsave(here::here("Output/03 - Relative Abundance Output/plot_relabund_loc.png"), plots_loc,
+                height = 600, width = 650, units = "mm",
                 scale = 0.5, dpi = 1000)
 
 
-## Quantifying relative abundance of corallicola in different locations
+## Quantifying relative abundance of corallicola in different locations ====
 ### Use rarefied phyloseq object that was transformed to relative abundances
 
 tax_glom(ps.rare.trans, taxrank = "Family", NArm = FALSE) -> ps.rare.trans.fam
@@ -174,33 +173,112 @@ kw_A18$Date <- "A18"
 
 kw_M19 <- broom::tidy(kruskal.test(Abundance ~ Location, data = subset(melt, Date_Longer == "March 2019 (During)")))
 kw_M19$Date <- "M19"
-dunn_test(Abundance ~ Location, data = subset(melt, Date_Longer == "March 2019 (During)"), p.adjust.method = "fdr") # north and east sig diff
+dunn_M19 <- as.data.frame(dunn_test(Abundance ~ Location, data = subset(melt, Date_Longer == "March 2019 (During)"), p.adjust.method = "fdr")) # north and east sig diff
+dunn_M19$Date <- "M19"
 
 kw_A19 <- broom::tidy(kruskal.test(Abundance ~ Location, data = subset(melt, Date_Longer == "August 2019 (After)")))
 kw_A19$Date <- "A19"
-dunn_test(Abundance ~ Location, data = subset(melt, Date_Longer == "August 2019 (After)"), p.adjust.method = "fdr") # north and west sig diff 
+dunn_A19 <- as.data.frame(dunn_test(Abundance ~ Location, data = subset(melt, Date_Longer == "August 2019 (After)"), p.adjust.method = "fdr")) # north and west sig diff 
+dunn_A19$Date <- "A19"
 
 kw_M20 <- broom::tidy(kruskal.test(Abundance ~ Location, data = subset(melt, Date_Longer == "March 2020 (1 Year Later)")))
 kw_M20$Date <- "M20"
 
 rbind(kw_A18, kw_M19, kw_A19, kw_M20) -> kw_output
-write.csv(kw_output, here::here("kw_output.csv"))
+write.csv(kw_output, here::here("Output/03 - Relative Abundance Output/kw_output.csv"))
 
-# Calculate effect size 
-                                         melt %>%
+rbind(dunn_M19, dunn_A19) -> dunn_output
+write.csv(dunn_output, here::here("Output/03 - Relative Abundance Output/dunn_output.csv"))
+
+## Effect size east vs north 
+melt %>%
   filter(Date_Longer == "March 2019 (During)" & Location == "East")
 melt %>%
   filter(Date_Longer == "March 2019 (During)" & Location == "North")
 
-group1 <- c(0.23667723, 0.13854277, 0.13445970, 0.13206617, 0.08546287, 0.05040479, 0.03428370, 0.02752552, 0.02731433)
-group2 <- c(0.11587469, 0.10116156, 0.03583245, 0.03484688, 0.03097501, 0.02949666, 0.02604717, 0.02541359, 0.02316086, 0.02316086, 0.02231609, 0.00499824)
+group1 <- c(0.23667723, 0.13854277, 0.13445970, 0.13206617, 0.08546287, 0.05040479, 0.03428370,0.02752552, 0.02731433)
+group2 <- c(0.11587469, 0.10116156, 0.03583245, 0.03484688, 0.03097501, 0.02949666, 0.02604717, 0.02541359, 0.02316086, 0.02316086, 0.02231609 , 0.00499824)
+
 cohen.d(group1, group2)
 
+## Effect size west vs north 
 melt %>%
-  filter(Date_Longer == "August 2019 (After)" & Location == "West")
-melt %>%
-  filter(Date_Longer == "August 2019 (After)" & Location == "North")
+  filter(Date_Longer == "March 2019 (During)" & Location == "West")
 
-group1 <- c(0.74565294, 0.44104189, 0.13558606, 0.08039423)
-group2 <- c(0.544808166, 0.073143259, 0.034494896, 0.013164379, 0.011756424, 0.006687786, 0.003379092, 0.003308694,0.002111932)
+group1 <- c(0.12439282, 0.09123548, 0.08497008, 0.05251672)
+group2 <- c(0.11587469, 0.10116156, 0.03583245, 0.03484688, 0.03097501, 0.02949666, 0.02604717, 0.02541359, 0.02316086, 0.02316086, 0.02231609 , 0.00499824)
+
 cohen.d(group1, group2)
+
+
+## Assessing corallicolidae total abundance ====
+# check if corallicolidae are in all samples in both rarefied and unrarefied data
+subset_taxa(ps.All, Family == "Corallicolidae") -> ps.All.cor
+sort(sample_sums(ps.All.cor))
+sum(taxa_sums(ps.All.cor)) # 644,291 reads are corallicolidae
+
+subset_taxa(ps.rare, Family == "Corallicolidae") -> ps.rare.cor
+sort(sample_sums(ps.rare.cor))
+sum(taxa_sums(ps.rare.cor)) # 83,950 reads are corallicolidae
+
+## Corallicolidae are found in all samples across the island in the nonrarfied data, although 4 samples have <100 reads
+## After rarefying, corallicolidae are found in 82/83 samples, but now 14 samples have <100 reads
+
+
+## Use nonrarefied data to plot total corallicolidae abundance by shore type over time
+ps.All.cor.fam <- ps.All.cor %>%
+  tax_glom("Family")
+
+ps.All.cor.fam@sam_data$Location <- factor(ps.All.cor.fam@sam_data$Location, c("North", "East", "West"), ordered = TRUE)
+ps.All.cor.fam@sam_data$Date_Long <- factor(ps.All.cor.fam@sam_data$Date_Long, c("August 2018", "March 2019", "August 2019", "March 2020"), ordered = TRUE)
+
+cor_nonrare <- phyloseq::psmelt(ps.All.cor.fam) %>%
+  ggplot(data = ., aes(x = Date_Long, y = Abundance, colour = Date_Long)) +
+  geom_boxplot(lwd = 1.25, stat = "boxplot", outlier.color = "red", alpha = 0.5) +
+  geom_jitter(height = 0, width = 0.2) + 
+  facet_wrap(~Location) +
+  theme_bw(base_line_size = 1.5, base_rect_size = 1.75) +
+  scale_color_brewer(palette = "Dark2") + 
+  theme(axis.text.x = element_text(angle = 50, face = "bold", size = 11.5, margin = margin(t = 20, l = 20)),
+        axis.text.y = element_text(face = "bold", size = 11.5), title = element_text(face = "bold"),
+        strip.text = element_text(face = "bold", size = 12), legend.position = "none") + 
+  xlab("Date") + labs(title = "Nonrarefied") 
+
+ps.All.cor.fam@sam_data$Date_Long <- factor(ps.All.cor.fam@sam_data$Date_Long, c("August 2018", "March 2019", "August 2019", "March 2020"), ordered = TRUE)
+
+phyloseq::psmelt(ps.All.cor.fam) %>%
+  ggplot(data = ., aes(x = Location, y = Abundance, colour = Location)) +
+  geom_boxplot(lwd = 1.25, stat = "boxplot", outlier.color = "red", alpha = 0.5) +
+  geom_jitter(height = 0, width = 0.2) + 
+  facet_wrap(~Date_Long, ncol = 4, nrow = 1) +
+  theme_bw(base_line_size = 1.5, base_rect_size = 1.75) +
+  scale_color_brewer(palette = "Dark2") + 
+  theme(axis.text.x = element_text(face = "bold", size = 11.5),
+        axis.text.y = element_text(face = "bold", size = 11.5), title = element_text(face = "bold"),
+        strip.text = element_text(face = "bold", size = 12), legend.position = "none") + 
+  xlab("Date") + labs(title = "Nonrarefied")
+
+## Use rarefied data
+ps.rare.cor.fam <- ps.rare.cor %>%
+  tax_glom("Family")
+
+ps.rare.cor.fam@sam_data$Location <- factor(ps.rare.cor.fam@sam_data$Location, c("North", "East", "West"), ordered = TRUE)
+ps.rare.cor.fam@sam_data$Date_Long <- factor(ps.rare.cor.fam@sam_data$Date_Long, c("August 2018", "March 2019", "August 2019", "March 2020"), ordered = TRUE)
+
+cor_rare <- phyloseq::psmelt(ps.rare.cor.fam) %>%
+  ggplot(data = ., aes(x = Date_Long, y = Abundance, colour = Date_Long)) +
+  geom_boxplot(lwd = 1.25, stat = "boxplot", outlier.color = "red", alpha = 0.5) +
+  geom_jitter(height = 0, width = 0.2) + 
+  facet_wrap(~Location) +
+  theme_bw(base_line_size = 1.5, base_rect_size = 1.75) +
+  scale_color_brewer(palette = "Dark2") + 
+  theme(axis.text.x = element_text(angle = 50, face = "bold", size = 11.5, margin = margin(t = 20, l = 20)),
+        axis.text.y = element_text(face = "bold", size = 11.5), title = element_text(face = "bold"),
+        strip.text = element_text(face = "bold", size = 12), legend.position = "none") + 
+  xlab("Date") + labs(title = "Rarefied") 
+
+ggarrange(cor_nonrare, cor_rare) -> cor_abund
+
+ggplot2::ggsave(here::here("Output/03 - Relative Abundance Output/plot_cora_abund.svg"), cor_abund,
+                height = 400, width = 700, units = "mm",
+                scale = 0.5, dpi = 1000)
