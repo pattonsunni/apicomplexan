@@ -1,84 +1,84 @@
 "","SampleID","X","LTER_Site","Reef_Type","CoralID","Date","Month","Year","Date_Long","Date_Longer","Location","quant_reading","Sample_or_Control","is.neg","Chao1","se.chao1","Shannon"
-"1","0_BAK_ACR_53_A18","46","0","BAK"," 53","A18","August","2018","August 2018","August 2018 (Before)","North","22.80","Sample","FALSE",7,0,0.312685676002956
-"2","0_BAK_ACR_53_A19","25","0","BAK"," 53","A19","August","2019","August 2019","August 2019 (After)","North","13.50","Sample","FALSE",4,0,0.0306932924180005
-"3","0_BAK_ACR_53_M19"," 2","0","BAK"," 53","M19","March","2019","March 2019","March 2019 (During)","North","11.20","Sample","FALSE",16,5.97357462077775,0.533129298234507
-"4","0_BAK_ACR_66_A18","49","0","BAK"," 66","A18","August","2018","August 2018","August 2018 (Before)","North","55.60","Sample","FALSE",10.3333333333333,0.915919647826376,0.188960319543954
-"5","0_BAK_ACR_66_M19"," 3","0","BAK"," 66","M19","March","2019","March 2019","March 2019 (During)","North","13.10","Sample","FALSE",7,0.462910049886276,0.486368756940501
-"6","0_FOR_ACR_50_A18","45","0","FOR"," 50","A18","August","2018","August 2018","August 2018 (Before)","North","22.40","Sample","FALSE",14,1.80442577596098,0.187445576720428
-"7","0_FOR_ACR_50_M19"," 1","0","FOR"," 50","M19","March","2019","March 2019","March 2019 (During)","North","30.40","Sample","FALSE",7,0.462910049886276,0.199648240278358
-"8","1_BAK_ACR_64_A18","48","1","BAK"," 64","A18","August","2018","August 2018","August 2018 (Before)","North","34.20","Sample","FALSE",6,0,0.795256084722674
-"9","1_BAK_ACR_64_A19","26","1","BAK"," 64","A19","August","2019","August 2019","August 2019 (After)","North"," 7.72","Sample","FALSE",4,0,0.0346851914550212
-"10","1_BAK_ACR_64_M19"," 5","1","BAK"," 64","M19","March","2019","March 2019","March 2019 (During)","North","13.70","Sample","FALSE",28,13.5988444887267,0.714737052150393
-"11","1_BAK_ACR_64_M20","70","1","BAK"," 64","M20","March","2020","March 2020","March 2020 (1 Year Later)","North","17.80","Sample","FALSE",4,0,0.0618664221344618
-"12","1_BAK_ACR_94_A18","50","1","BAK"," 94","A18","August","2018","August 2018","August 2018 (Before)","North","55.00","Sample","FALSE",12,4.47911821679223,0.316445705131852
-"13","1_BAK_ACR_94_A19","27","1","BAK"," 94","A19","August","2019","August 2019","August 2019 (After)","North","18.40","Sample","FALSE",4,0,0.0845089502520225
-"14","1_BAK_ACR_94_M19"," 6","1","BAK"," 94","M19","March","2019","March 2019","March 2019 (During)","North","12.30","Sample","FALSE",7,0,0.815405986524128
-"15","1_FOR_ACR_148_A18","57","1","FOR","148","A18","August","2018","August 2018","August 2018 (Before)","North","16.00","Sample","FALSE",6,0.456435464587638,0.136373707816416
-"16","1_FOR_ACR_148_A19","33","1","FOR","148","A19","August","2019","August 2019","August 2019 (After)","North","12.30","Sample","FALSE",17.5,1.28660683305241,0.807476063014309
-"17","1_FOR_ACR_148_M19","13","1","FOR","148","M19","March","2019","March 2019","March 2019 (During)","North","42.20","Sample","FALSE",21,10.1886958836509,0.409056484622418
-"18","2_BAK_ACR_108_A18","51","2","BAK","108","A18","August","2018","August 2018","August 2018 (Before)","North","64.40","Sample","FALSE",8,0.233853586673371,0.0774280220547152
-"19","2_BAK_ACR_108_A19","28","2","BAK","108","A19","August","2019","August 2019","August 2019 (After)","North","52.80","Sample","FALSE",5,0,0.103440537732168
-"20","2_BAK_ACR_108_M19"," 7","2","BAK","108","M19","March","2019","March 2019","March 2019 (During)","North"," 8.56","Sample","FALSE",6,0,0.155695671530608
-"21","2_BAK_ACR_115_A18","52","2","BAK","115","A18","August","2018","August 2018","August 2018 (Before)","North","44.00","Sample","FALSE",6,0.228217732293819,0.204449963293269
-"22","2_BAK_ACR_115_A19","29","2","BAK","115","A19","August","2019","August 2019","August 2019 (After)","North","23.20","Sample","FALSE",4,0,0.408096320331271
-"23","2_BAK_ACR_115_M19"," 8","2","BAK","115","M19","March","2019","March 2019","March 2019 (During)","North","19.50","Sample","FALSE",5,0.447213595499958,0.183638933961601
-"24","2_BAK_ACR_115_M20","71","2","BAK","115","M20","March","2020","March 2020","March 2020 (1 Year Later)","North","10.40","Sample","FALSE",4,0,0.12828951930874
-"25","2_BAK_ACR_117_A18","53","2","BAK","117","A18","August","2018","August 2018","August 2018 (Before)","North","26.40","Sample","FALSE",15,1.80534186769688,0.388631791801243
-"26","2_BAK_ACR_117_A19","30","2","BAK","117","A19","August","2019","August 2019","August 2019 (After)","North","20.60","Sample","FALSE",13,1.80336816877108,0.387995474282118
-"27","2_BAK_ACR_117_M19"," 9","2","BAK","117","M19","March","2019","March 2019","March 2019 (During)","North","26.80","Sample","FALSE",16,7.14142842854285,0.685266401574282
-"28","2_BAK_ACR_117_M20","72","2","BAK","117","M20","March","2020","March 2020","March 2020 (1 Year Later)","North"," 9.96","Sample","FALSE",6,0,0.380655527433284
-"29","2_BAK_ACR_118_A18","54","2","BAK","118","A18","August","2018","August 2018","August 2018 (Before)","North","42.40","Sample","FALSE",16,2.86744175568088,0.545017956061258
-"30","2_BAK_ACR_118_M19","10","2","BAK","118","M19","March","2019","March 2019","March 2019 (During)","North"," 9.04","Sample","FALSE",10,0.237170824512628,0.712124654369423
-"31","2_BAK_ACR_118_M20","73","2","BAK","118","M20","March","2020","March 2020","March 2020 (1 Year Later)","North","14.00","Sample","FALSE",5,0,0.100491198023084
-"32","2_BAK_ACR_131_A19","31","2","BAK","131","A19","August","2019","August 2019","August 2019 (After)","North","16.30","Sample","FALSE",5,0.447213595499958,0.189407916772279
-"33","2_BAK_ACR_131_M19","11","2","BAK","131","M19","March","2019","March 2019","March 2019 (During)","North","10.90","Sample","FALSE",8,0,0.383356383124461
-"34","2_BAK_ACR_134_A19","32","2","BAK","134","A19","August","2019","August 2019","August 2019 (After)","North","17.20","Sample","FALSE",4,0,0.0260752378137726
-"35","2_BAK_ACR_134_M19","12","2","BAK","134","M19","March","2019","March 2019","March 2019 (During)","North"," 8.84","Sample","FALSE",4,0,0.120757556633271
-"36","2_BAK_ACR_134_M20","74","2","BAK","134","M20","March","2020","March 2020","March 2020 (1 Year Later)","North","13.50","Sample","FALSE",8,2.23606797749979,0.313172885136063
-"37","3_5_BAK_ACR_208_A18","62","3.5","BAK","208","A18","August","2018","August 2018","August 2018 (Before)","East","25.20","Sample","FALSE",6,0,0.509502163158218
-"38","3_5_BAK_ACR_208_A19","38","3.5","BAK","208","A19","August","2019","August 2019","August 2019 (After)","East","37.20","Sample","FALSE",10.5,1.27825215486952,0.84626998760028
-"39","3_5_BAK_ACR_208_M19","18","3.5","BAK","208","M19","March","2019","March 2019","March 2019 (During)","East","13.90","Sample","FALSE",6,0,0.235066953927114
-"40","3_5_BAK_ACR_209_A18","63","3.5","BAK","209","A18","August","2018","August 2018","August 2018 (Before)","East","32.00","Sample","FALSE",7,0,0.625009568467088
-"41","3_5_BAK_ACR_209_A19","39","3.5","BAK","209","A19","August","2019","August 2019","August 2019 (After)","East","23.60","Sample","FALSE",5,0,0.245671473096204
-"42","3_5_BAK_ACR_209_M19","19","3.5","BAK","209","M19","March","2019","March 2019","March 2019 (During)","East"," 9.48","Sample","FALSE",11,4.46196043338474,0.374641076682703
-"43","3_5_BAK_ACR_209_M20","76","3.5","BAK","209","M20","March","2020","March 2020","March 2020 (1 Year Later)","East","10.90","Sample","FALSE",6,0,0.136321666716195
-"44","3_5_BAK_ACR_273_A18","65","3.5","BAK","273","A18","August","2018","August 2018","August 2018 (Before)","East","56.60","Sample","FALSE",21.5,8.10280959024794,0.304094274808465
-"45","3_5_BAK_ACR_273_A19","41","3.5","BAK","273","A19","August","2019","August 2019","August 2019 (After)","East","72.80","Sample","FALSE",3,0,0.035811847161636
-"46","3_5_BAK_ACR_273_M19","21","3.5","BAK","273","M19","March","2019","March 2019","March 2019 (During)","East","30.60","Sample","FALSE",7,0,0.482391400428345
-"47","3_5_BAK_ACR_273_M20","78","3.5","BAK","273","M20","March","2020","March 2020","March 2020 (1 Year Later)","East","23.40","Sample","FALSE",8,0,0.144442098826237
-"48","3_5_BAK_ACR_279_A18","67","3.5","BAK","279","A18","August","2018","August 2018","August 2018 (Before)","East","29.00","Sample","FALSE",10.5,2.55650430973904,0.280108296650301
-"49","3_5_BAK_ACR_279_A19","43","3.5","BAK","279","A19","August","2019","August 2019","August 2019 (After)","East","29.00","Sample","FALSE",9,2.24845626053867,0.512897164735972
-"50","3_5_BAK_ACR_279_M19","23","3.5","BAK","279","M19","March","2019","March 2019","March 2019 (During)","East"," 9.22","Sample","FALSE",6,0,0.162333268691708
-"51","3_BAK_ACR_131_A18","55","3","BAK","131","A18","August","2018","August 2018","August 2018 (Before)","East","21.60","Sample","FALSE",11.5,2.56014605561615,0.14829848849687
-"52","3_BAK_ACR_134_A18","56","3","BAK","134","A18","August","2018","August 2018","August 2018 (Before)","East","12.70","Sample","FALSE",6,0.456435464587638,0.0339292250069114
-"53","3_BAK_ACR_201_A18","60","3","BAK","201","A18","August","2018","August 2018","August 2018 (Before)","East","19.40","Sample","FALSE",8,0,0.590529812332122
-"54","3_BAK_ACR_201_A19","36","3","BAK","201","A19","August","2019","August 2019","August 2019 (After)","East","18.10","Sample","FALSE",39,3.88707689963198,0.934225719328318
-"55","3_BAK_ACR_201_M19","16","3","BAK","201","M19","March","2019","March 2019","March 2019 (During)","East","12.20","Sample","FALSE",6,0.456435464587638,0.244529346619874
-"56","3_BAK_ACR_432_A18","68","3","BAK","432","A18","August","2018","August 2018","August 2018 (Before)","East","12.30","Sample","FALSE",6,0,0.374976296956432
-"57","3_BAK_ACR_432_A19","44","3","BAK","432","A19","August","2019","August 2019","August 2019 (After)","East","17.50","Sample","FALSE",75.3333333333333,2.42291783535556,2.06231477210883
-"58","3_BAK_ACR_432_M19","24","3","BAK","432","M19","March","2019","March 2019","March 2019 (During)","East","13.90","Sample","FALSE",6,0,0.191281428167999
-"59","4_BAK_ACR_204_A18","61","4","BAK","204","A18","August","2018","August 2018","August 2018 (Before)","East","14.40","Sample","FALSE",5,0,0.0295043547126104
-"60","4_BAK_ACR_204_A19","37","4","BAK","204","A19","August","2019","August 2019","August 2019 (After)","East","22.20","Sample","FALSE",13,0.240192230707631,0.487940430723236
-"61","4_BAK_ACR_204_M19","17","4","BAK","204","M19","March","2019","March 2019","March 2019 (During)","East","36.20","Sample","FALSE",5,0,0.495453030298851
-"62","4_BAK_ACR_254_A18","64","4","BAK","254","A18","August","2018","August 2018","August 2018 (Before)","East","22.40","Sample","FALSE",10.5,2.55650430973904,0.247842385683585
-"63","4_BAK_ACR_254_A19","40","4","BAK","254","A19","August","2019","August 2019","August 2019 (After)","East","25.40","Sample","FALSE",7,0,0.124805695669287
-"64","4_BAK_ACR_254_M19","20","4","BAK","254","M19","March","2019","March 2019","March 2019 (During)","East","13.30","Sample","FALSE",8,0,0.51178196101084
-"65","4_BAK_ACR_254_M20","77","4","BAK","254","M20","March","2020","March 2020","March 2020 (1 Year Later)","East","13.90","Sample","FALSE",8,2.23606797749979,0.177086889599415
-"66","4_BAK_ACR_276_A18","66","4","BAK","276","A18","August","2018","August 2018","August 2018 (Before)","East","25.20","Sample","FALSE",6,0,0.62357511891032
-"67","4_BAK_ACR_276_A19","42","4","BAK","276","A19","August","2019","August 2019","August 2019 (After)","East","43.60","Sample","FALSE",30,0,0.53030876346972
-"68","4_BAK_ACR_276_M19","22","4","BAK","276","M19","March","2019","March 2019","March 2019 (During)","East","31.60","Sample","FALSE",6,0,0.67681616326946
-"69","4_BAK_ACR_579_M20","79","4","BAK","579","M20","March","2020","March 2020","March 2020 (1 Year Later)","East","19.70","Sample","FALSE",6,0,0.407068806338567
-"70","5_5_BAK_ACR_180_A18","58","5.5","BAK","180","A18","August","2018","August 2018","August 2018 (Before)","West","25.00","Sample","FALSE",8,0,0.234892350714899
-"71","5_5_BAK_ACR_180_A19","34","5.5","BAK","180","A19","August","2019","August 2019","August 2019 (After)","West","19.40","Sample","FALSE",6,0,0.323402523245719
-"72","5_5_BAK_ACR_180_M19","14","5.5","BAK","180","M19","March","2019","March 2019","March 2019 (During)","West","42.20","Sample","FALSE",7,0,0.464156177503148
-"73","5_5_BAK_ACR_188_A18","59","5.5","BAK","188","A18","August","2018","August 2018","August 2018 (Before)","West","30.60","Sample","FALSE",5,0,0.0469320284581218
-"74","5_5_BAK_ACR_188_A19","35","5.5","BAK","188","A19","August","2019","August 2019","August 2019 (After)","West","18.50","Sample","FALSE",11,2.26635470223962,1.19140905190474
-"75","5_5_BAK_ACR_188_M19","15","5.5","BAK","188","M19","March","2019","March 2019","March 2019 (During)","West","25.60","Sample","FALSE",7,0.462910049886276,0.386884879614655
-"76","5_5_BAK_ACR_188_M20","75","5.5","BAK","188","M20","March","2020","March 2020","March 2020 (1 Year Later)","West","11.50","Sample","FALSE",7,0,0.226061973487727
-"77","5_BAK_ACR_289_M20","80","5","BAK","289","M20","March","2020","March 2020","March 2020 (1 Year Later)","West","34.40","Sample","FALSE",5,0,0.156880830824886
-"78","5_BAK_ACR_589_A19","84","5","BAK","589","A19","August","2019","August 2019","August 2019 (After)","West","19.90","Sample","FALSE",6,0.228217732293819,0.736765448829017
-"79","5_BAK_ACR_589_M19","82","5","BAK","589","M19","March","2019","March 2019","March 2019 (During)","West"," 6.94","Sample","FALSE",6,0,0.277397649614616
-"80","5_BAK_ACR_593_A18","69","5","BAK","593","A18","August","2018","August 2018","August 2018 (Before)","West","17.00","Sample","FALSE",7,0.462910049886276,0.309690921640433
-"81","5_BAK_ACR_593_A19","85","5","BAK","593","A19","August","2019","August 2019","August 2019 (After)","West","11.30","Sample","FALSE",5,0,0.43947561057428
-"82","5_BAK_ACR_593_M19","83","5","BAK","593","M19","March","2019","March 2019","March 2019 (During)","West","10.50","Sample","FALSE",5,0,0.343228181434969
-"83","5_BAK_ACR_593_M20","81","5","BAK","593","M20","March","2020","March 2020","March 2020 (1 Year Later)","West","39.60","Sample","FALSE",6,0,0.124347925855054
+"1","0_BAK_ACR_53_A18","46","0","BAK"," 53","A18","August","2018","August 2018","August 2018 (Before)","North","22.80","Sample","FALSE",7,0,0.302778494987249
+"2","0_BAK_ACR_53_A19","25","0","BAK"," 53","A19","August","2019","August 2019","August 2019 (After)","North","13.50","Sample","FALSE",5,0,0.0326564579861483
+"3","0_BAK_ACR_53_M19"," 2","0","BAK"," 53","M19","March","2019","March 2019","March 2019 (During)","North","11.20","Sample","FALSE",14,4.12959700558922,0.546945842197275
+"4","0_BAK_ACR_66_A18","49","0","BAK"," 66","A18","August","2018","August 2018","August 2018 (Before)","North","55.60","Sample","FALSE",9.5,1.2760444638351,0.194589900554218
+"5","0_BAK_ACR_66_M19"," 3","0","BAK"," 66","M19","March","2019","March 2019","March 2019 (During)","North","13.10","Sample","FALSE",7,0.462910049886276,0.477741186362137
+"6","0_FOR_ACR_50_A18","45","0","FOR"," 50","A18","August","2018","August 2018","August 2018 (Before)","North","22.40","Sample","FALSE",10.5,1.27825215486952,0.19045986840609
+"7","0_FOR_ACR_50_M19"," 1","0","FOR"," 50","M19","March","2019","March 2019","March 2019 (During)","North","30.40","Sample","FALSE",6,0,0.195616941444687
+"8","1_BAK_ACR_64_A18","48","1","BAK"," 64","A18","August","2018","August 2018","August 2018 (Before)","North","34.20","Sample","FALSE",6,0,0.784542275210557
+"9","1_BAK_ACR_64_A19","26","1","BAK"," 64","A19","August","2019","August 2019","August 2019 (After)","North"," 7.72","Sample","FALSE",4,0,0.0336049229557928
+"10","1_BAK_ACR_64_M19"," 5","1","BAK"," 64","M19","March","2019","March 2019","March 2019 (During)","North","13.70","Sample","FALSE",8,0.467707173346743,0.718115107111281
+"11","1_BAK_ACR_64_M20","70","1","BAK"," 64","M20","March","2020","March 2020","March 2020 (1 Year Later)","North","17.80","Sample","FALSE",4,0,0.0658197812848704
+"12","1_BAK_ACR_94_A18","50","1","BAK"," 94","A18","August","2018","August 2018","August 2018 (Before)","North","55.00","Sample","FALSE",7,0,0.315108401958389
+"13","1_BAK_ACR_94_A19","27","1","BAK"," 94","A19","August","2019","August 2019","August 2019 (After)","North","18.40","Sample","FALSE",4,0,0.0796318359392574
+"14","1_BAK_ACR_94_M19"," 6","1","BAK"," 94","M19","March","2019","March 2019","March 2019 (During)","North","12.30","Sample","FALSE",7,0.462910049886276,0.806774798028148
+"15","1_FOR_ACR_148_A18","57","1","FOR","148","A18","August","2018","August 2018","August 2018 (Before)","North","16.00","Sample","FALSE",7,0.462910049886276,0.124017096167045
+"16","1_FOR_ACR_148_A19","33","1","FOR","148","A19","August","2019","August 2019","August 2019 (After)","North","12.30","Sample","FALSE",18,1.80747760944416,0.81002411524278
+"17","1_FOR_ACR_148_M19","13","1","FOR","148","M19","March","2019","March 2019","March 2019 (During)","North","42.20","Sample","FALSE",11,2.26635470223962,0.415671925060433
+"18","2_BAK_ACR_108_A18","51","2","BAK","108","A18","August","2018","August 2018","August 2018 (Before)","North","64.40","Sample","FALSE",7,0.462910049886276,0.0731310491716657
+"19","2_BAK_ACR_108_A19","28","2","BAK","108","A19","August","2019","August 2019","August 2019 (After)","North","52.80","Sample","FALSE",5,0,0.100138304697267
+"20","2_BAK_ACR_108_M19"," 7","2","BAK","108","M19","March","2019","March 2019","March 2019 (During)","North"," 8.56","Sample","FALSE",6,0,0.157330803609453
+"21","2_BAK_ACR_115_A18","52","2","BAK","115","A18","August","2018","August 2018","August 2018 (Before)","North","44.00","Sample","FALSE",5,0.447213595499958,0.184526910283066
+"22","2_BAK_ACR_115_A19","29","2","BAK","115","A19","August","2019","August 2019","August 2019 (After)","North","23.20","Sample","FALSE",4,0,0.407246676963035
+"23","2_BAK_ACR_115_M19"," 8","2","BAK","115","M19","March","2019","March 2019","March 2019 (During)","North","19.50","Sample","FALSE",5,0.447213595499958,0.187101219882632
+"24","2_BAK_ACR_115_M20","71","2","BAK","115","M20","March","2020","March 2020","March 2020 (1 Year Later)","North","10.40","Sample","FALSE",4,0,0.126456626848719
+"25","2_BAK_ACR_117_A18","53","2","BAK","117","A18","August","2018","August 2018","August 2018 (Before)","North","26.40","Sample","FALSE",17.3333333333333,4.10296750598584,0.391540765035276
+"26","2_BAK_ACR_117_A19","30","2","BAK","117","A19","August","2019","August 2019","August 2019 (After)","North","20.60","Sample","FALSE",13,1.80336816877108,0.390117865539595
+"27","2_BAK_ACR_117_M19"," 9","2","BAK","117","M19","March","2019","March 2019","March 2019 (During)","North","26.80","Sample","FALSE",12,4.47911821679223,0.682275234070662
+"28","2_BAK_ACR_117_M20","72","2","BAK","117","M20","March","2020","March 2020","March 2020 (1 Year Later)","North"," 9.96","Sample","FALSE",8,0.467707173346743,0.379776844440495
+"29","2_BAK_ACR_118_A18","54","2","BAK","118","A18","August","2018","August 2018","August 2018 (Before)","North","42.40","Sample","FALSE",14.2,0.618339439120481,0.549367754702727
+"30","2_BAK_ACR_118_M19","10","2","BAK","118","M19","March","2019","March 2019","March 2019 (During)","North"," 9.04","Sample","FALSE",10,0,0.701541093611674
+"31","2_BAK_ACR_118_M20","73","2","BAK","118","M20","March","2020","March 2020","March 2020 (1 Year Later)","North","14.00","Sample","FALSE",8,2.23606797749979,0.111686459460399
+"32","2_BAK_ACR_131_A18","55","2","BAK","131","A18","August","2018","August 2018","August 2018 (Before)","East","21.60","Sample","FALSE",9,2.24845626053867,0.140626218850823
+"33","2_BAK_ACR_131_A19","31","2","BAK","131","A19","August","2019","August 2019","August 2019 (After)","North","16.30","Sample","FALSE",4,0,0.191103919572772
+"34","2_BAK_ACR_131_M19","11","2","BAK","131","M19","March","2019","March 2019","March 2019 (During)","North","10.90","Sample","FALSE",8,0.467707173346743,0.40853069215706
+"35","2_BAK_ACR_134_A18","56","2","BAK","134","A18","August","2018","August 2018","August 2018 (Before)","East","12.70","Sample","FALSE",5,0.447213595499958,0.0336097823392692
+"36","2_BAK_ACR_134_A19","32","2","BAK","134","A19","August","2019","August 2019","August 2019 (After)","North","17.20","Sample","FALSE",4,0,0.0298692948171843
+"37","2_BAK_ACR_134_M19","12","2","BAK","134","M19","March","2019","March 2019","March 2019 (During)","North"," 8.84","Sample","FALSE",4,0,0.133877101682527
+"38","2_BAK_ACR_134_M20","74","2","BAK","134","M20","March","2020","March 2020","March 2020 (1 Year Later)","North","13.50","Sample","FALSE",7.5,1.26984250992003,0.312888853334082
+"39","3_5_BAK_ACR_208_A18","62","3.5","BAK","208","A18","August","2018","August 2018","August 2018 (Before)","East","25.20","Sample","FALSE",6,0,0.535119403067315
+"40","3_5_BAK_ACR_208_A19","38","3.5","BAK","208","A19","August","2019","August 2019","August 2019 (After)","East","37.20","Sample","FALSE",8,0,0.846597015338673
+"41","3_5_BAK_ACR_208_M19","18","3.5","BAK","208","M19","March","2019","March 2019","March 2019 (During)","East","13.90","Sample","FALSE",6,0,0.25742129772829
+"42","3_5_BAK_ACR_209_A18","63","3.5","BAK","209","A18","August","2018","August 2018","August 2018 (Before)","East","32.00","Sample","FALSE",8,0.467707173346743,0.620499857555478
+"43","3_5_BAK_ACR_209_A19","39","3.5","BAK","209","A19","August","2019","August 2019","August 2019 (After)","East","23.60","Sample","FALSE",5,0,0.247887955277123
+"44","3_5_BAK_ACR_209_M19","19","3.5","BAK","209","M19","March","2019","March 2019","March 2019 (During)","East"," 9.48","Sample","FALSE",7,0,0.368092201254685
+"45","3_5_BAK_ACR_209_M20","76","3.5","BAK","209","M20","March","2020","March 2020","March 2020 (1 Year Later)","East","10.90","Sample","FALSE",6,0,0.133555646519757
+"46","3_5_BAK_ACR_273_A18","65","3.5","BAK","273","A18","August","2018","August 2018","August 2018 (Before)","East","56.60","Sample","FALSE",11,0,0.312833460558641
+"47","3_5_BAK_ACR_273_A19","41","3.5","BAK","273","A19","August","2019","August 2019","August 2019 (After)","East","72.80","Sample","FALSE",3,0,0.035811847161636
+"48","3_5_BAK_ACR_273_M19","21","3.5","BAK","273","M19","March","2019","March 2019","March 2019 (During)","East","30.60","Sample","FALSE",7,0.462910049886276,0.473818979286553
+"49","3_5_BAK_ACR_273_M20","78","3.5","BAK","273","M20","March","2020","March 2020","March 2020 (1 Year Later)","East","23.40","Sample","FALSE",12.5,2.56320112359526,0.147079293363704
+"50","3_5_BAK_ACR_279_A18","67","3.5","BAK","279","A18","August","2018","August 2018","August 2018 (Before)","East","29.00","Sample","FALSE",11,1.80067327475704,0.282533796550349
+"51","3_5_BAK_ACR_279_A19","43","3.5","BAK","279","A19","August","2019","August 2019","August 2019 (After)","East","29.00","Sample","FALSE",10,2.25831795812724,0.512753831033032
+"52","3_5_BAK_ACR_279_M19","23","3.5","BAK","279","M19","March","2019","March 2019","March 2019 (During)","East"," 9.22","Sample","FALSE",6,0,0.159394838128948
+"53","3_BAK_ACR_201_A18","60","3","BAK","201","A18","August","2018","August 2018","August 2018 (Before)","East","19.40","Sample","FALSE",9.5,1.2760444638351,0.606071716811698
+"54","3_BAK_ACR_201_A19","36","3","BAK","201","A19","August","2019","August 2019","August 2019 (After)","East","18.10","Sample","FALSE",55.6,11.6377070722407,0.931767820793134
+"55","3_BAK_ACR_201_M19","16","3","BAK","201","M19","March","2019","March 2019","March 2019 (During)","East","12.20","Sample","FALSE",6,0,0.251557352111142
+"56","3_BAK_ACR_432_A18","68","3","BAK","432","A18","August","2018","August 2018","August 2018 (Before)","East","12.30","Sample","FALSE",7,0.462910049886276,0.376434190158366
+"57","3_BAK_ACR_432_A19","44","3","BAK","432","A19","August","2019","August 2019","August 2019 (After)","East","17.50","Sample","FALSE",71.875,2.25616766756321,2.05332650323638
+"58","3_BAK_ACR_432_M19","24","3","BAK","432","M19","March","2019","March 2019","March 2019 (During)","East","13.90","Sample","FALSE",7,0,0.195517521883402
+"59","4_BAK_ACR_204_A18","61","4","BAK","204","A18","August","2018","August 2018","August 2018 (Before)","East","14.40","Sample","FALSE",6,0,0.028948284949802
+"60","4_BAK_ACR_204_A19","37","4","BAK","204","A19","August","2019","August 2019","August 2019 (After)","East","22.20","Sample","FALSE",14,0.481812055829716,0.469546595247459
+"61","4_BAK_ACR_204_M19","17","4","BAK","204","M19","March","2019","March 2019","March 2019 (During)","East","36.20","Sample","FALSE",5,0,0.489749420115396
+"62","4_BAK_ACR_254_A18","64","4","BAK","254","A18","August","2018","August 2018","August 2018 (Before)","East","22.40","Sample","FALSE",8.5,1.27331203144075,0.243056393960813
+"63","4_BAK_ACR_254_A19","40","4","BAK","254","A19","August","2019","August 2019","August 2019 (After)","East","25.40","Sample","FALSE",6,0.456435464587638,0.132148838166942
+"64","4_BAK_ACR_254_M19","20","4","BAK","254","M19","March","2019","March 2019","March 2019 (During)","East","13.30","Sample","FALSE",9.5,1.2760444638351,0.502114007336541
+"65","4_BAK_ACR_254_M20","77","4","BAK","254","M20","March","2020","March 2020","March 2020 (1 Year Later)","East","13.90","Sample","FALSE",7,0.231455024943138,0.189477829074343
+"66","4_BAK_ACR_276_A18","66","4","BAK","276","A18","August","2018","August 2018","August 2018 (Before)","East","25.20","Sample","FALSE",6,0,0.630817994329525
+"67","4_BAK_ACR_276_A19","42","4","BAK","276","A19","August","2019","August 2019","August 2019 (After)","East","43.60","Sample","FALSE",34,4.1612710162387,0.509269645803744
+"68","4_BAK_ACR_276_M19","22","4","BAK","276","M19","March","2019","March 2019","March 2019 (During)","East","31.60","Sample","FALSE",6,0.456435464587638,0.668703336839698
+"69","4_BAK_ACR_579_M20","79","4","BAK","579","M20","March","2020","March 2020","March 2020 (1 Year Later)","East","19.70","Sample","FALSE",6,0,0.414490832267132
+"70","5_5_BAK_ACR_180_A18","58","5.5","BAK","180","A18","August","2018","August 2018","August 2018 (Before)","West","25.00","Sample","FALSE",7,0,0.229115194284641
+"71","5_5_BAK_ACR_180_A19","34","5.5","BAK","180","A19","August","2019","August 2019","August 2019 (After)","West","19.40","Sample","FALSE",6,0,0.326954196934276
+"72","5_5_BAK_ACR_180_M19","14","5.5","BAK","180","M19","March","2019","March 2019","March 2019 (During)","West","42.20","Sample","FALSE",7,0.462910049886276,0.466822859276342
+"73","5_5_BAK_ACR_188_A18","59","5.5","BAK","188","A18","August","2018","August 2018","August 2018 (Before)","West","30.60","Sample","FALSE",5,0,0.0489897749148287
+"74","5_5_BAK_ACR_188_A19","35","5.5","BAK","188","A19","August","2019","August 2019","August 2019 (After)","West","18.50","Sample","FALSE",8,0,1.19155290594859
+"75","5_5_BAK_ACR_188_M19","15","5.5","BAK","188","M19","March","2019","March 2019","March 2019 (During)","West","25.60","Sample","FALSE",7,0,0.399267928051508
+"76","5_5_BAK_ACR_188_M20","75","5.5","BAK","188","M20","March","2020","March 2020","March 2020 (1 Year Later)","West","11.50","Sample","FALSE",6,0,0.221990765492443
+"77","5_BAK_ACR_289_M20","80","5","BAK","289","M20","March","2020","March 2020","March 2020 (1 Year Later)","West","34.40","Sample","FALSE",5,0,0.163222241303409
+"78","5_BAK_ACR_589_A19","84","5","BAK","589","A19","August","2019","August 2019","August 2019 (After)","West","19.90","Sample","FALSE",5,0,0.739022136958691
+"79","5_BAK_ACR_589_M19","82","5","BAK","589","M19","March","2019","March 2019","March 2019 (During)","West"," 6.94","Sample","FALSE",6,0.456435464587638,0.260050401784493
+"80","5_BAK_ACR_593_A18","69","5","BAK","593","A18","August","2018","August 2018","August 2018 (Before)","West","17.00","Sample","FALSE",7,0.462910049886276,0.294972810857222
+"81","5_BAK_ACR_593_A19","85","5","BAK","593","A19","August","2019","August 2019","August 2019 (After)","West","11.30","Sample","FALSE",5,0,0.444036410014108
+"82","5_BAK_ACR_593_M19","83","5","BAK","593","M19","March","2019","March 2019","March 2019 (During)","West","10.50","Sample","FALSE",5,0,0.353731496888202
+"83","5_BAK_ACR_593_M20","81","5","BAK","593","M20","March","2020","March 2020","March 2020 (1 Year Later)","West","39.60","Sample","FALSE",6,0,0.122250799793768

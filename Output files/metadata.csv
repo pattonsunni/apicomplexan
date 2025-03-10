@@ -1,90 +1,90 @@
-"","SampleID","LTER_Site","Reef_Type","CoralID","Date","Month","Year","Date_Long","Date_Longer","Location"
-"1","0_FOR_ACR_50_M19","0","FOR","50","M19","March","2019","March 2019","March 2019 (During)","North"
-"2","0_BAK_ACR_53_M19","0","BAK","53","M19","March","2019","March 2019","March 2019 (During)","North"
-"3","0_BAK_ACR_66_M19","0","BAK","66","M19","March","2019","March 2019","March 2019 (During)","North"
-"4","1_BAK_ACR_57_M19","1","BAK","57","M19","March","2019","March 2019","March 2019 (During)","North"
-"5","1_BAK_ACR_64_M19","1","BAK","64","M19","March","2019","March 2019","March 2019 (During)","North"
-"6","1_BAK_ACR_94_M19","1","BAK","94","M19","March","2019","March 2019","March 2019 (During)","North"
-"7","2_BAK_ACR_108_M19","2","BAK","108","M19","March","2019","March 2019","March 2019 (During)","North"
-"8","2_BAK_ACR_115_M19","2","BAK","115","M19","March","2019","March 2019","March 2019 (During)","North"
-"9","2_BAK_ACR_117_M19","2","BAK","117","M19","March","2019","March 2019","March 2019 (During)","North"
-"10","2_BAK_ACR_118_M19","2","BAK","118","M19","March","2019","March 2019","March 2019 (During)","North"
-"11","2_BAK_ACR_131_M19","2","BAK","131","M19","March","2019","March 2019","March 2019 (During)","North"
-"12","2_BAK_ACR_134_M19","2","BAK","134","M19","March","2019","March 2019","March 2019 (During)","North"
-"13","1_FOR_ACR_148_M19","1","FOR","148","M19","March","2019","March 2019","March 2019 (During)","North"
-"14","5_5_BAK_ACR_180_M19","5.5","BAK","180","M19","March","2019","March 2019","March 2019 (During)","West"
-"15","5_5_BAK_ACR_188_M19","5.5","BAK","188","M19","March","2019","March 2019","March 2019 (During)","West"
-"16","3_BAK_ACR_201_M19","3","BAK","201","M19","March","2019","March 2019","March 2019 (During)","East"
-"17","4_BAK_ACR_204_M19","4","BAK","204","M19","March","2019","March 2019","March 2019 (During)","East"
-"18","3_5_BAK_ACR_208_M19","3.5","BAK","208","M19","March","2019","March 2019","March 2019 (During)","East"
-"19","3_5_BAK_ACR_209_M19","3.5","BAK","209","M19","March","2019","March 2019","March 2019 (During)","East"
-"20","4_BAK_ACR_254_M19","4","BAK","254","M19","March","2019","March 2019","March 2019 (During)","East"
-"21","3_5_BAK_ACR_273_M19","3.5","BAK","273","M19","March","2019","March 2019","March 2019 (During)","East"
-"22","4_BAK_ACR_276_M19","4","BAK","276","M19","March","2019","March 2019","March 2019 (During)","East"
-"23","3_5_BAK_ACR_279_M19","3.5","BAK","279","M19","March","2019","March 2019","March 2019 (During)","East"
-"24","3_BAK_ACR_432_M19","3","BAK","432","M19","March","2019","March 2019","March 2019 (During)","East"
-"25","0_BAK_ACR_53_A19","0","BAK","53","A19","August","2019","August 2019","August 2019 (After)","North"
-"26","1_BAK_ACR_64_A19","1","BAK","64","A19","August","2019","August 2019","August 2019 (After)","North"
-"27","1_BAK_ACR_94_A19","1","BAK","94","A19","August","2019","August 2019","August 2019 (After)","North"
-"28","2_BAK_ACR_108_A19","2","BAK","108","A19","August","2019","August 2019","August 2019 (After)","North"
-"29","2_BAK_ACR_115_A19","2","BAK","115","A19","August","2019","August 2019","August 2019 (After)","North"
-"30","2_BAK_ACR_117_A19","2","BAK","117","A19","August","2019","August 2019","August 2019 (After)","North"
-"31","2_BAK_ACR_131_A19","2","BAK","131","A19","August","2019","August 2019","August 2019 (After)","North"
-"32","2_BAK_ACR_134_A19","2","BAK","134","A19","August","2019","August 2019","August 2019 (After)","North"
-"33","1_FOR_ACR_148_A19","1","FOR","148","A19","August","2019","August 2019","August 2019 (After)","North"
-"34","5_5_BAK_ACR_180_A19","5.5","BAK","180","A19","August","2019","August 2019","August 2019 (After)","West"
-"35","5_5_BAK_ACR_188_A19","5.5","BAK","188","A19","August","2019","August 2019","August 2019 (After)","West"
-"36","3_BAK_ACR_201_A19","3","BAK","201","A19","August","2019","August 2019","August 2019 (After)","East"
-"37","4_BAK_ACR_204_A19","4","BAK","204","A19","August","2019","August 2019","August 2019 (After)","East"
-"38","3_5_BAK_ACR_208_A19","3.5","BAK","208","A19","August","2019","August 2019","August 2019 (After)","East"
-"39","3_5_BAK_ACR_209_A19","3.5","BAK","209","A19","August","2019","August 2019","August 2019 (After)","East"
-"40","4_BAK_ACR_254_A19","4","BAK","254","A19","August","2019","August 2019","August 2019 (After)","East"
-"41","3_5_BAK_ACR_273_A19","3.5","BAK","273","A19","August","2019","August 2019","August 2019 (After)","East"
-"42","4_BAK_ACR_276_A19","4","BAK","276","A19","August","2019","August 2019","August 2019 (After)","East"
-"43","3_5_BAK_ACR_279_A19","3.5","BAK","279","A19","August","2019","August 2019","August 2019 (After)","East"
-"44","3_BAK_ACR_432_A19","3","BAK","432","A19","August","2019","August 2019","August 2019 (After)","East"
-"45","0_FOR_ACR_50_A18","0","FOR","50","A18","August","2018","August 2018","August 2018 (Before)","North"
-"46","0_BAK_ACR_53_A18","0","BAK","53","A18","August","2018","August 2018","August 2018 (Before)","North"
-"47","1_BAK_ACR_57_A18","1","BAK","57","A18","August","2018","August 2018","August 2018 (Before)","North"
-"48","1_BAK_ACR_64_A18","1","BAK","64","A18","August","2018","August 2018","August 2018 (Before)","North"
-"49","0_BAK_ACR_66_A18","0","BAK","66","A18","August","2018","August 2018","August 2018 (Before)","North"
-"50","1_BAK_ACR_94_A18","1","BAK","94","A18","August","2018","August 2018","August 2018 (Before)","North"
-"51","2_BAK_ACR_108_A18","2","BAK","108","A18","August","2018","August 2018","August 2018 (Before)","North"
-"52","2_BAK_ACR_115_A18","2","BAK","115","A18","August","2018","August 2018","August 2018 (Before)","North"
-"53","2_BAK_ACR_117_A18","2","BAK","117","A18","August","2018","August 2018","August 2018 (Before)","North"
-"54","2_BAK_ACR_118_A18","2","BAK","118","A18","August","2018","August 2018","August 2018 (Before)","North"
-"55","3_BAK_ACR_131_A18","3","BAK","131","A18","August","2018","August 2018","August 2018 (Before)","East"
-"56","3_BAK_ACR_134_A18","3","BAK","134","A18","August","2018","August 2018","August 2018 (Before)","East"
-"57","1_FOR_ACR_148_A18","1","FOR","148","A18","August","2018","August 2018","August 2018 (Before)","North"
-"58","5_5_BAK_ACR_180_A18","5.5","BAK","180","A18","August","2018","August 2018","August 2018 (Before)","West"
-"59","5_5_BAK_ACR_188_A18","5.5","BAK","188","A18","August","2018","August 2018","August 2018 (Before)","West"
-"60","3_BAK_ACR_201_A18","3","BAK","201","A18","August","2018","August 2018","August 2018 (Before)","East"
-"61","4_BAK_ACR_204_A18","4","BAK","204","A18","August","2018","August 2018","August 2018 (Before)","East"
-"62","3_5_BAK_ACR_208_A18","3.5","BAK","208","A18","August","2018","August 2018","August 2018 (Before)","East"
-"63","3_5_BAK_ACR_209_A18","3.5","BAK","209","A18","August","2018","August 2018","August 2018 (Before)","East"
-"64","4_BAK_ACR_254_A18","4","BAK","254","A18","August","2018","August 2018","August 2018 (Before)","East"
-"65","3_5_BAK_ACR_273_A18","3.5","BAK","273","A18","August","2018","August 2018","August 2018 (Before)","East"
-"66","4_BAK_ACR_276_A18","4","BAK","276","A18","August","2018","August 2018","August 2018 (Before)","East"
-"67","3_5_BAK_ACR_279_A18","3.5","BAK","279","A18","August","2018","August 2018","August 2018 (Before)","East"
-"68","3_BAK_ACR_432_A18","3","BAK","432","A18","August","2018","August 2018","August 2018 (Before)","East"
-"69","5_BAK_ACR_593_A18","5","BAK","593","A18","August","2018","August 2018","August 2018 (Before)","West"
-"70","1_BAK_ACR_64_M20","1","BAK","64","M20","March","2020","March 2020","March 2020 (1 Year Later)","North"
-"71","2_BAK_ACR_115_M20","2","BAK","115","M20","March","2020","March 2020","March 2020 (1 Year Later)","North"
-"72","2_BAK_ACR_117_M20","2","BAK","117","M20","March","2020","March 2020","March 2020 (1 Year Later)","North"
-"73","2_BAK_ACR_118_M20","2","BAK","118","M20","March","2020","March 2020","March 2020 (1 Year Later)","North"
-"74","2_BAK_ACR_134_M20","2","BAK","134","M20","March","2020","March 2020","March 2020 (1 Year Later)","North"
-"75","5_5_BAK_ACR_188_M20","5.5","BAK","188","M20","March","2020","March 2020","March 2020 (1 Year Later)","West"
-"76","3_5_BAK_ACR_209_M20","3.5","BAK","209","M20","March","2020","March 2020","March 2020 (1 Year Later)","East"
-"77","4_BAK_ACR_254_M20","4","BAK","254","M20","March","2020","March 2020","March 2020 (1 Year Later)","East"
-"78","3_5_BAK_ACR_273_M20","3.5","BAK","273","M20","March","2020","March 2020","March 2020 (1 Year Later)","East"
-"79","4_BAK_ACR_579_M20","4","BAK","579","M20","March","2020","March 2020","March 2020 (1 Year Later)","East"
-"80","5_BAK_ACR_289_M20","5","BAK","289","M20","March","2020","March 2020","March 2020 (1 Year Later)","West"
-"81","5_BAK_ACR_593_M20","5","BAK","593","M20","March","2020","March 2020","March 2020 (1 Year Later)","West"
-"82","5_BAK_ACR_589_M19","5","BAK","589","M19","March","2019","March 2019","March 2019 (During)","West"
-"83","5_BAK_ACR_593_M19","5","BAK","593","M19","March","2019","March 2019","March 2019 (During)","West"
-"84","5_BAK_ACR_589_A19","5","BAK","589","A19","August","2019","August 2019","August 2019 (After)","West"
-"85","5_BAK_ACR_593_A19","5","BAK","593","A19","August","2019","August 2019","August 2019 (After)","West"
-"86","NC_1","NC","1",NA,NA,NA,NA,"NA NA",NA,NA
-"87","NC_2","NC","2",NA,NA,NA,NA,"NA NA",NA,NA
-"88","NC_3","NC","3",NA,NA,NA,NA,"NA NA",NA,NA
-"89","NC_4","NC","4",NA,NA,NA,NA,"NA NA",NA,NA
+,SampleID,LTER_Site,Reef_Type,CoralID,Date,Month,Year,Date_Long,Date_Longer,Location
+1,0_FOR_ACR_50_M19,0,FOR,50,M19,March,2019,Mar-19,March 2019 (During),North
+2,0_BAK_ACR_53_M19,0,BAK,53,M19,March,2019,Mar-19,March 2019 (During),North
+3,0_BAK_ACR_66_M19,0,BAK,66,M19,March,2019,Mar-19,March 2019 (During),North
+4,1_BAK_ACR_57_M19,1,BAK,57,M19,March,2019,Mar-19,March 2019 (During),North
+5,1_BAK_ACR_64_M19,1,BAK,64,M19,March,2019,Mar-19,March 2019 (During),North
+6,1_BAK_ACR_94_M19,1,BAK,94,M19,March,2019,Mar-19,March 2019 (During),North
+7,2_BAK_ACR_108_M19,2,BAK,108,M19,March,2019,Mar-19,March 2019 (During),North
+8,2_BAK_ACR_115_M19,2,BAK,115,M19,March,2019,Mar-19,March 2019 (During),North
+9,2_BAK_ACR_117_M19,2,BAK,117,M19,March,2019,Mar-19,March 2019 (During),North
+10,2_BAK_ACR_118_M19,2,BAK,118,M19,March,2019,Mar-19,March 2019 (During),North
+11,2_BAK_ACR_131_M19,2,BAK,131,M19,March,2019,Mar-19,March 2019 (During),North
+12,2_BAK_ACR_134_M19,2,BAK,134,M19,March,2019,Mar-19,March 2019 (During),North
+13,1_FOR_ACR_148_M19,1,FOR,148,M19,March,2019,Mar-19,March 2019 (During),North
+14,5_5_BAK_ACR_180_M19,5.5,BAK,180,M19,March,2019,Mar-19,March 2019 (During),West
+15,5_5_BAK_ACR_188_M19,5.5,BAK,188,M19,March,2019,Mar-19,March 2019 (During),West
+16,3_BAK_ACR_201_M19,3,BAK,201,M19,March,2019,Mar-19,March 2019 (During),East
+17,4_BAK_ACR_204_M19,4,BAK,204,M19,March,2019,Mar-19,March 2019 (During),East
+18,3_5_BAK_ACR_208_M19,3.5,BAK,208,M19,March,2019,Mar-19,March 2019 (During),East
+19,3_5_BAK_ACR_209_M19,3.5,BAK,209,M19,March,2019,Mar-19,March 2019 (During),East
+20,4_BAK_ACR_254_M19,4,BAK,254,M19,March,2019,Mar-19,March 2019 (During),East
+21,3_5_BAK_ACR_273_M19,3.5,BAK,273,M19,March,2019,Mar-19,March 2019 (During),East
+22,4_BAK_ACR_276_M19,4,BAK,276,M19,March,2019,Mar-19,March 2019 (During),East
+23,3_5_BAK_ACR_279_M19,3.5,BAK,279,M19,March,2019,Mar-19,March 2019 (During),East
+24,3_BAK_ACR_432_M19,3,BAK,432,M19,March,2019,Mar-19,March 2019 (During),East
+25,0_BAK_ACR_53_A19,0,BAK,53,A19,August,2019,Aug-19,August 2019 (After),North
+26,1_BAK_ACR_64_A19,1,BAK,64,A19,August,2019,Aug-19,August 2019 (After),North
+27,1_BAK_ACR_94_A19,1,BAK,94,A19,August,2019,Aug-19,August 2019 (After),North
+28,2_BAK_ACR_108_A19,2,BAK,108,A19,August,2019,Aug-19,August 2019 (After),North
+29,2_BAK_ACR_115_A19,2,BAK,115,A19,August,2019,Aug-19,August 2019 (After),North
+30,2_BAK_ACR_117_A19,2,BAK,117,A19,August,2019,Aug-19,August 2019 (After),North
+31,2_BAK_ACR_131_A19,2,BAK,131,A19,August,2019,Aug-19,August 2019 (After),North
+32,2_BAK_ACR_134_A19,2,BAK,134,A19,August,2019,Aug-19,August 2019 (After),North
+33,1_FOR_ACR_148_A19,1,FOR,148,A19,August,2019,Aug-19,August 2019 (After),North
+34,5_5_BAK_ACR_180_A19,5.5,BAK,180,A19,August,2019,Aug-19,August 2019 (After),West
+35,5_5_BAK_ACR_188_A19,5.5,BAK,188,A19,August,2019,Aug-19,August 2019 (After),West
+36,3_BAK_ACR_201_A19,3,BAK,201,A19,August,2019,Aug-19,August 2019 (After),East
+37,4_BAK_ACR_204_A19,4,BAK,204,A19,August,2019,Aug-19,August 2019 (After),East
+38,3_5_BAK_ACR_208_A19,3.5,BAK,208,A19,August,2019,Aug-19,August 2019 (After),East
+39,3_5_BAK_ACR_209_A19,3.5,BAK,209,A19,August,2019,Aug-19,August 2019 (After),East
+40,4_BAK_ACR_254_A19,4,BAK,254,A19,August,2019,Aug-19,August 2019 (After),East
+41,3_5_BAK_ACR_273_A19,3.5,BAK,273,A19,August,2019,Aug-19,August 2019 (After),East
+42,4_BAK_ACR_276_A19,4,BAK,276,A19,August,2019,Aug-19,August 2019 (After),East
+43,3_5_BAK_ACR_279_A19,3.5,BAK,279,A19,August,2019,Aug-19,August 2019 (After),East
+44,3_BAK_ACR_432_A19,3,BAK,432,A19,August,2019,Aug-19,August 2019 (After),East
+45,0_FOR_ACR_50_A18,0,FOR,50,A18,August,2018,Aug-18,August 2018 (Before),North
+46,0_BAK_ACR_53_A18,0,BAK,53,A18,August,2018,Aug-18,August 2018 (Before),North
+47,1_BAK_ACR_57_A18,1,BAK,57,A18,August,2018,Aug-18,August 2018 (Before),North
+48,1_BAK_ACR_64_A18,1,BAK,64,A18,August,2018,Aug-18,August 2018 (Before),North
+49,0_BAK_ACR_66_A18,0,BAK,66,A18,August,2018,Aug-18,August 2018 (Before),North
+50,1_BAK_ACR_94_A18,1,BAK,94,A18,August,2018,Aug-18,August 2018 (Before),North
+51,2_BAK_ACR_108_A18,2,BAK,108,A18,August,2018,Aug-18,August 2018 (Before),North
+52,2_BAK_ACR_115_A18,2,BAK,115,A18,August,2018,Aug-18,August 2018 (Before),North
+53,2_BAK_ACR_117_A18,2,BAK,117,A18,August,2018,Aug-18,August 2018 (Before),North
+54,2_BAK_ACR_118_A18,2,BAK,118,A18,August,2018,Aug-18,August 2018 (Before),North
+55,2_BAK_ACR_131_A18,3,BAK,131,A18,August,2018,Aug-18,August 2018 (Before),East
+56,2_BAK_ACR_134_A18,3,BAK,134,A18,August,2018,Aug-18,August 2018 (Before),East
+57,1_FOR_ACR_148_A18,1,FOR,148,A18,August,2018,Aug-18,August 2018 (Before),North
+58,5_5_BAK_ACR_180_A18,5.5,BAK,180,A18,August,2018,Aug-18,August 2018 (Before),West
+59,5_5_BAK_ACR_188_A18,5.5,BAK,188,A18,August,2018,Aug-18,August 2018 (Before),West
+60,3_BAK_ACR_201_A18,3,BAK,201,A18,August,2018,Aug-18,August 2018 (Before),East
+61,4_BAK_ACR_204_A18,4,BAK,204,A18,August,2018,Aug-18,August 2018 (Before),East
+62,3_5_BAK_ACR_208_A18,3.5,BAK,208,A18,August,2018,Aug-18,August 2018 (Before),East
+63,3_5_BAK_ACR_209_A18,3.5,BAK,209,A18,August,2018,Aug-18,August 2018 (Before),East
+64,4_BAK_ACR_254_A18,4,BAK,254,A18,August,2018,Aug-18,August 2018 (Before),East
+65,3_5_BAK_ACR_273_A18,3.5,BAK,273,A18,August,2018,Aug-18,August 2018 (Before),East
+66,4_BAK_ACR_276_A18,4,BAK,276,A18,August,2018,Aug-18,August 2018 (Before),East
+67,3_5_BAK_ACR_279_A18,3.5,BAK,279,A18,August,2018,Aug-18,August 2018 (Before),East
+68,3_BAK_ACR_432_A18,3,BAK,432,A18,August,2018,Aug-18,August 2018 (Before),East
+69,5_BAK_ACR_593_A18,5,BAK,593,A18,August,2018,Aug-18,August 2018 (Before),West
+70,1_BAK_ACR_64_M20,1,BAK,64,M20,March,2020,Mar-20,March 2020 (1 Year Later),North
+71,2_BAK_ACR_115_M20,2,BAK,115,M20,March,2020,Mar-20,March 2020 (1 Year Later),North
+72,2_BAK_ACR_117_M20,2,BAK,117,M20,March,2020,Mar-20,March 2020 (1 Year Later),North
+73,2_BAK_ACR_118_M20,2,BAK,118,M20,March,2020,Mar-20,March 2020 (1 Year Later),North
+74,2_BAK_ACR_134_M20,2,BAK,134,M20,March,2020,Mar-20,March 2020 (1 Year Later),North
+75,5_5_BAK_ACR_188_M20,5.5,BAK,188,M20,March,2020,Mar-20,March 2020 (1 Year Later),West
+76,3_5_BAK_ACR_209_M20,3.5,BAK,209,M20,March,2020,Mar-20,March 2020 (1 Year Later),East
+77,4_BAK_ACR_254_M20,4,BAK,254,M20,March,2020,Mar-20,March 2020 (1 Year Later),East
+78,3_5_BAK_ACR_273_M20,3.5,BAK,273,M20,March,2020,Mar-20,March 2020 (1 Year Later),East
+79,4_BAK_ACR_579_M20,4,BAK,579,M20,March,2020,Mar-20,March 2020 (1 Year Later),East
+80,5_BAK_ACR_289_M20,5,BAK,289,M20,March,2020,Mar-20,March 2020 (1 Year Later),West
+81,5_BAK_ACR_593_M20,5,BAK,593,M20,March,2020,Mar-20,March 2020 (1 Year Later),West
+82,5_BAK_ACR_589_M19,5,BAK,589,M19,March,2019,Mar-19,March 2019 (During),West
+83,5_BAK_ACR_593_M19,5,BAK,593,M19,March,2019,Mar-19,March 2019 (During),West
+84,5_BAK_ACR_589_A19,5,BAK,589,A19,August,2019,Aug-19,August 2019 (After),West
+85,5_BAK_ACR_593_A19,5,BAK,593,A19,August,2019,Aug-19,August 2019 (After),West
+86,NC_1,NC,1,NA,NA,NA,NA,NA NA,NA,NA
+87,NC_2,NC,2,NA,NA,NA,NA,NA NA,NA,NA
+88,NC_3,NC,3,NA,NA,NA,NA,NA NA,NA,NA
+89,NC_4,NC,4,NA,NA,NA,NA,NA NA,NA,NA
